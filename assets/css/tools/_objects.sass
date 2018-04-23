@@ -1,0 +1,269 @@
+body, html
+    +animation(opacity,2000ms)
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    button,input,textarea,select 
+        border: 0 
+        font-family: inherit
+        margin: 0 0 
+        padding: 0 0
+    * 
+        &::after,&::before 
+            -webkit-box-sizing: inherit
+            -moz-box-sizing: inherit
+            box-sizing: inherit
+        font-weight: normal 
+        -webkit-box-sizing: inherit
+        -moz-box-sizing: inherit
+        box-sizing: inherit
+        line-height: initial
+
+.wrap
+    overflow: hidden
+    position: relative
+
+textarea[placeholder] 
+    text-overflow: ellipsis
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+ 
+
+input[placeholder] 
+    text-overflow: ellipsis
+    color: #eaeaea
+    opacity: 1 
+    font-weight: 300
+
+
+::-moz-placeholder 
+    text-overflow: ellipsis 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+input::-webkit-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+textarea::-webkit-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+input:-ms-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+textarea:-ms-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+.flex  
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex    
+
+
+[class*="brandico-"]::before 
+    font-family: 'brandico', sans-serif
+
+.container
+    display: block
+    max-width: 1280px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px
+
+@for $i from 1 through 5
+    h#{$i}
+        font-weight: 800
+
+h1 
+    font-size: 4.8rem
+h3 
+    font-size: 1.8rem
+h4 
+    font-size: 3rem
+p 
+    line-height: 1.6em
+    font-size: 1.6rem
+    a
+        color: #4cb2fb
+        &:hover
+            text-decoration: underline
+    strong 
+        font-weight: bold
+
+.title
+    @extend h1
+    position: relative 
+    &::after 
+        background: #5d89c4
+        background: -moz-linear-gradient(left, #5d89c4 0%, #32a9d0 100%)
+        background: -webkit-linear-gradient(left, #5d89c4 0%,#32a9d0 100%)
+        background: linear-gradient(to right, #5d89c4 0%,#32a9d0 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d89c4', endColorstr='#32a9d0',GradientType=1 )     
+        content: ""
+        display: block 
+        height: 5px
+        margin: 45px 0
+        top: 100%
+        width: 60px
+
+.logo
+    +rem(2.4)
+    text-transform: uppercase
+    font-weight: 800
+    line-height: 0
+    top: -10px
+
+.btn
+    +border(999px)
+    border: 2px $transparent solid
+    display: inline-block 
+    font-weight: bold
+    max-width: 240px
+    padding: 20px 40px
+    text-align: center 
+    +transition(.3s)
+    text-transform: uppercase
+    &.-white
+        &:hover
+            background-color: $transparent
+            @include shadow(0px,0px,0px,1px,$bluejeans) 
+            color: white
+        background-color: white 
+        @include shadow(0px,0px,0px,1px,$transparent) 
+        border: none 
+        color: $bluejeans
+    &.-cyan
+        background-color: $cyan
+        +shadow(-5px,10px,15px,-5px,$cyan)
+        color: $bluejeans
+        &:hover
+            background-color: $transparent
+            border-color: $cyan
+            box-shadow: none
+
+.honest-education  
+    +border(999px)
+    bottom: 20px
+    background: #9cbfef 
+    background: -moz-linear-gradient(top, #9cbfef 0%, #75b8ec 100%)
+    background: -webkit-linear-gradient(top, #9cbfef 0%,#75b8ec 100%) 
+    background: linear-gradient(to bottom, #9cbfef 0%,#75b8ec 100%) 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cbfef', endColorstr='#75b8ec',GradientType=0 )    
+    display: block 
+    margin: 35px
+    padding: 18px
+    position: absolute
+    +shadow(0,5px,60px,-25px,#0099e5)
+    +transition(.2s)
+    right: 0
+    height: 135px
+    width: 135px
+    &:hover
+        -webkit-animation: anim-moema-1 500ms forwards
+        animation: anim-moema-1 500ms forwards
+        &::before 
+            opacity: .1
+            -webkit-animation: anim-moema-2 500ms 500ms forwards
+            animation: anim-moema-2 500ms 500ms forwards
+    &::after
+        bottom: -35px
+        content: "Honest Education"
+        color: #0099e5
+        display: block
+        font-size: 1.2rem
+        left: 0
+        position: absolute 
+        text-align: center
+        text-transform: uppercase   
+        width: 100%
+    &::before
+        content: ""
+        position: absolute
+        top: 0 
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        background-color: rgba(0,0,0,1)
+        +border(999px)
+    > * 
+        background: url(assets/imgs/honest-education.png) center center no-repeat white
+        background-size: 35px
+        +border(999px)
+        display: block 
+        height: 100% 
+        width: 100%
+
+[video-button]
+    text-align: center
+    .play-button
+        background-color: rgba(255,255,255,.9)
+        +border(999px)
+        display: block 
+        height: 155px
+        padding: 15px
+        +shadow(0px,0px,40px,-20px,$bluejeans)
+        width: 155px
+        z-index: 2
+        &:hover
+            -webkit-animation: anim-moema-1 500ms forwards
+            animation: anim-moema-1 500ms forwards
+        &-inner
+            +border(999px)
+            background-color: white
+            color: $bluejeans 
+            display: inherit
+            font-size: 1.5rem
+            height: 100% 
+            line-height: 130px
+            +shadow(0px,0px,25px,-15px,$bluejeans)
+            width: 100%
+
+.iframe
+    height: 100%
+    overflow: hidden
+    position: relative
+    width: 100%
+    iframe 
+        height: inherit    
+        left: 0
+        position: absolute
+        top: 0
+        width: inherit
+
+@media only screen and (max-width: 1280px)
+    .honest-education
+        display: none
+        >*
+            background-size: 20px
+        height: 70px
+        margin-bottom: 0
+        position: fixed
+        padding: 9px
+        width: 70px 
+        &::after 
+            display: none
+    .btn
+        min-width: 233px
+        padding-left: 0 
+        padding-right: 0
+@media only screen and (max-width: 636px)
+    .logo
+        top: -8px
+    .title
+        font-size: 3rem

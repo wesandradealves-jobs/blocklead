@@ -1,0 +1,25 @@
+.-pg-internal
+    .tcon-menu__lines::before, .tcon-menu__lines::after,
+    .tcon-menu__lines
+        background: black
+    .header
+        +shadow(0px,0px,50px,-30px,#32a9d0)
+        >.container
+            >.navigation
+                >ul 
+                    >li 
+                        color: black
+        .btn
+            &.-white
+                background: #5d89c4
+                background: -moz-linear-gradient(left, #5d89c4 0%, #32a9d0 100%)
+                background: -webkit-linear-gradient(left, #5d89c4 0%,#32a9d0 100%)
+                background: linear-gradient(to right, #5d89c4 0%,#32a9d0 100%)
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d89c4', endColorstr='#32a9d0',GradientType=1 )
+                color: white
+                &:hover
+                    background: transparent
+                    border-color: #5d89c4
+                    color: #5d89c4                
+    .main  
+        padding-top: 75px

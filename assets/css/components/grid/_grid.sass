@@ -1,0 +1,49 @@
+.grid
+    align-items: stretch
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap 
+    p 
+        text-align: inherit
+        strong 
+            text-align: inherit  
+    &.-centered
+        text-align: center
+        .title
+            &::after
+                margin-left: auto
+                margin-right: auto
+        [class*="column"]
+            &:not(:last-child)
+                margin-bottom: 30px
+    [class*="column"]
+        flex: 0 0 100%
+    img 
+        display: inline-block
+        max-width: 100%
+
+@media only screen and (min-width: 1024px)
+    .grid
+        &.-reverse
+            flex-flow: row-reverse wrap
+            text-align: right              
+    [class*="column"]
+        &[class*="md"]
+            flex: 0 0 auto 
+            width: 50%
+            &:nth-of-type(2n+1)
+                &+[class*="md"]
+                    width: 50%
+@media only screen and (max-width: 1023px)
+    [class*="column"]
+        padding-top: 30px
+        padding-bottom: 30px
+        text-align: center
+        .title
+            &::after
+                margin-left: auto
+                margin-right: auto        
+        &[class*="md"]
+            &:nth-of-type(2n+1)
+                padding-top: 0
+                padding-bottom: 0

@@ -1,0 +1,72 @@
+.header
+    &.-sticky
+        background-color: white
+        position: fixed
+        top: -100%
+        +transition(.4s)
+        width: 100%
+        z-index: 10
+        &.-stuck
+            top: 0
+    >.container
+        padding-top: 23px
+        padding-bottom: 23px
+        @extend .flex
+        align-items: center 
+        flex-flow: row wrap 
+        justify-content: space-between
+        max-width: 100%
+        >.navigation
+            >ul 
+                >li 
+                    color: white
+                    display: inline-block 
+                    vertical-align: middle
+                    >a 
+                        position: relative 
+                        display: block 
+                        &:not([class])
+                            &::after 
+                                background-color: $cyan
+                                content: ""
+                                display: block 
+                                height: 6px
+                                left: 0
+                                position: absolute
+                                top: -44px
+                                +width(.2s)
+                                width: 0
+                            &:hover
+                                color: $cyan
+                                &::after
+                                    width: 100%
+                    &:last-child
+                        display: none
+                    &:not(:nth-last-child(2)):not(:last-child)
+                        margin-right: 40px          
+                    &:nth-last-child(3)
+                        margin-right: 33px!important              
+
+@media only screen and (max-width: 1440px)
+    .header
+        >.container
+            >.navigation
+                >ul 
+                    >li 
+                        &:not(:nth-last-child(2)):not(:last-child)
+                            margin-right: 33px      
+@media only screen and (max-width: 1024px)
+    .header
+        .container
+            padding-left: 15px
+            padding-right: 15px                                               
+@media only screen and (max-width: 837px)
+    .header 
+        .container
+            >.navigation
+                >ul 
+                    >li 
+                        &:not(:last-child)
+                            display: none 
+                        &:last-child
+                            display: block

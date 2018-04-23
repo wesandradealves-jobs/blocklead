@@ -1,0 +1,132 @@
+$floatingNavItemH: 50px
+$floating-content-padding: 325px
+$gap: 110px
+
+[floating-navigation]
+    // padding-left: $floating-content-padding
+    // padding-right: $floating-content-padding
+    .grid
+        &:not(:last-of-type)
+            margin-bottom: 245px
+        align-items: center
+        text-align: justify
+.navigation
+    &.floating-navigation
+        +border(999px)
+        background-color: rgba(255,255,255,.5)
+        display: block 
+        left: 35px
+        position: fixed
+        +shadow(0px,0px,40px,-13px,#5d89c4)
+        top: 50%
+        >ul
+            @extend .flex
+            flex-flow: column 
+            flex-wrap: wrap 
+            justify-content: space-between
+            padding: 6px        
+            >li
+                &.-active,
+                &:hover
+                    background: #5d89c4
+                    background: -moz-linear-gradient(left, #5d89c4 0%, #32a9d0 100%)
+                    background: -webkit-linear-gradient(left, #5d89c4 0%,#32a9d0 100%)
+                    background: linear-gradient(to right, #5d89c4 0%,#32a9d0 100%)
+                    color: white
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d89c4', endColorstr='#32a9d0',GradientType=1 )   
+                    > a::after 
+                        display: block  
+                +border(999px)
+                color: rgba(0,0,0,.1)
+                display: block
+                font-weight: bold 
+                height: $floatingNavItemH
+                line-height: $floatingNavItemH+5
+                position: relative
+                text-align: center
+                width: $floatingNavItemH
+                &:not(:last-child)
+                    margin-bottom: $floatingNavItemH/2
+                > a 
+                    font-size: 2.3rem
+                    position: relative
+                    &::after 
+                        content: attr(title)
+                        color: gray
+                        display: none
+                        font-size: 1rem
+                        left: calc(100% + 40px)
+                        position: absolute
+                        text-align: left
+                        top: 0
+                        text-transform: uppercase
+                        width: 80px
+@media only screen and (min-width: 1900px)
+    [floating-navigation]
+        .grid
+            [class*="column"]
+                &[class*="md"]
+                    padding-right: $gap/2
+                    &:nth-of-type(2n+1)
+                        &+[class*="md"]
+                            padding-left: $gap/2 
+                            padding-right: 0    
+            &.-reverse 
+                [class*="column"]
+                    &[class*="md"]
+                        padding-right: 0
+                        padding-left: $gap/2
+                        &:nth-of-type(2n+1)
+                            &+[class*="md"]
+                                padding-left: 0 
+                                padding-right: $gap/2   
+@media only screen and (min-width: 1024px)
+    [floating-navigation]
+        .grid
+            [class*="column"]
+                &[class*="md"]
+                    padding-right: $gap/2
+                    &:nth-of-type(2n+1)
+                        &+[class*="md"]
+                            padding-left: $gap/2 
+                            padding-right: 0    
+            &.-reverse 
+                [class*="column"]
+                    &[class*="md"]
+                        padding-right: 0
+                        padding-left: $gap/2
+                        &:nth-of-type(2n+1)
+                            &+[class*="md"]
+                                padding-left: 0 
+                                padding-right: $gap/2         
+@media only screen and (max-width: 1440px)                        
+    .navigation
+        &.floating-navigation
+            >ul
+                >li
+                    >a 
+                        font-size: 1.4rem    
+                    height: 30px
+                    line-height: 30px
+                    width: 30px
+@media only screen and (max-width: 1024px)                      
+    .navigation
+        &.floating-navigation
+            width: 85%
+            height: auto
+            left: 7%
+            border: 0 !important
+            margin-top: 0 !important
+            top: initial
+            bottom: 35px
+            z-index: 5
+            >ul 
+                flex-flow: row wrap
+                justify-content: space-evenly
+                >li 
+                    color: gray 
+                    > a  
+                        &::after
+                            display: none!important
+                    &:not(:last-child)
+                        margin-bottom: 0

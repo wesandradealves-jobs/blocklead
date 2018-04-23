@@ -1,0 +1,134 @@
+.-pg-advisory
+    .grid
+        &.-advisory
+            img 
+                display: block
+                margin: 0 auto 
+            h4 
+                display: block
+                padding: 0px 0 45px
+                text-align: center 
+            p  
+                text-align: justify
+            >[class*="column"]
+                background-size: cover 
+                background-position: center center 
+                background-repeat: no-repeat
+                &:nth-child(1)  
+                    background-color: $cyan
+                &:nth-child(2)  
+                    background-color: $purple
+                    color: white
+                &:nth-child(3)  
+                    background-color: $bluejeans 
+                    color: white
+                &:nth-child(4)  
+                    background-color: $opaqueblack
+                    color: white
+                &:nth-child(7)  
+                    background-color: $darkblue   
+                    color: white
+                &:nth-child(8)  
+                    background-color: $petroleum   
+                    color: white   
+                &:nth-child(9)                    
+                    background-color: #00bfa5
+                &:nth-child(10)                    
+                    background-color: #e1e1e1                                                                                                                   
+                &:not([class*="md"])
+                    padding-top: 145px
+                    padding-bottom: 145px
+                    h4 
+                        text-align: left
+                &.-reverse
+                    @extend .flex 
+                    flex-flow: row
+                    justify-content: flex-end
+                    h4
+                        text-align: left
+                padding: 50px 54px
+.team
+    .title
+        padding-top: 60px
+        text-align: center 
+        &::after 
+            margin-left: auto 
+            margin-right: auto
+    &-list 
+        align-items: stretch 
+        @extend .flex
+        flex-flow: row wrap
+        justify-content: space-between  
+        margin: 0 -15px
+        .social
+            text-align: center 
+            >*
+                background-color: $transparent
+                box-shadow: none!important
+                color: white
+                +transition(500ms)
+                &:hover
+                    background-color: inherit
+                    color: white
+                    transform: scale(1.4)
+        >li 
+            color: white
+            flex: 1
+            height: 500px
+            padding: 0 15px
+            text-align: center
+            div[style]
+                align-items: flex-end
+                +border(5px)
+                background-size: cover 
+                background-position: center center
+                @extend .flex 
+                flex-flow: column wrap 
+                justify-content: flex-end 
+                overflow: hidden 
+                height: 100%
+                width: 100%
+                &:hover
+                    >div
+                        display: flex 
+                        height: inherit  
+                >div 
+                    background: #5d89c4
+                    background: -moz-linear-gradient(left, #5d89c4 0%, #32a9d0 100%)
+                    background: -webkit-linear-gradient(left, #5d89c4 0%,#32a9d0 100%)
+                    background: linear-gradient(to right, #5d89c4 0%,#32a9d0 100%)
+                    display: block 
+                    flex-flow: column wrap 
+                    justify-content: center
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d89c4', endColorstr='#32a9d0',GradientType=1 )  
+                    height: 65px
+                    padding: 15px
+                    +transition(500ms)
+                    overflow: hidden     
+                    width: 100%        
+                    p
+                        padding-bottom: 15px
+            p 
+                font-size: 1.3rem
+                strong
+                    display: block 
+                    font-size: inherit
+
+@media only screen and (max-width: 836px)
+    .-pg-advisory
+        .grid
+            margin: 0 -15px
+            &.-advisory
+                >[class*="column"]
+                    padding: 35px
+        .team
+            &-list
+                margin: 0 auto
+                >li 
+                    flex: 0 0 auto
+                    height: 650px
+                    padding-left: 0 
+                    padding-right: 0
+                    width: 100%
+                    &:not(:last-child)
+                        margin-bottom: 30px

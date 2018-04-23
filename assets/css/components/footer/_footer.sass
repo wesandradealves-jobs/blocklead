@@ -1,0 +1,32 @@
+.footer
+    position: relative
+    .social
+        left: -125px
+        margin: 0 auto        
+    >.container
+        align-items: center 
+        @extend .flex
+        flex-flow: row 
+        justify-content: space-between
+        max-width: 100%
+        padding-top: 95px
+        padding-bottom: 25px
+        >.copyright 
+            color: #7f9da6
+            font-size: 1.2rem
+@media only screen and (max-width: 1280px)
+    .footer 
+        .social
+            left: 0
+            margin-right: initial
+            margin-left: auto
+@media only screen and (max-width: 550px)
+    .footer
+        .social
+            margin: 0 auto
+        >.container
+            padding-top: 60px
+            >.copyright
+                padding-bottom: 25px
+                text-align: center
+            flex-flow: column

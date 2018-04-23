@@ -1,0 +1,248 @@
+.-pg-home
+    background-position: right 0
+    background-repeat: no-repeat
+    .btn
+        &.-white
+            &:hover
+                @include shadow(0px,0px,0px,1px,white)     
+    .header
+        >.container
+            >.navigation
+                >ul 
+                    >li 
+                        color: white
+    .footer
+        flex: 0 0 auto
+        height: 110px
+        padding-top: 60px
+        >.container
+            padding-top: 0
+#home 
+    padding-left: 280px
+    padding-top: 65px
+    padding-right: 960px
+    h1+p 
+        font-size: 2.4rem
+        line-height: 1.6em
+        max-width: 510px
+        padding: 10px 0 30px
+    .bitcoin-for-beginners
+        @extend .flex
+        color: gray
+        flex-flow: column wrap
+        padding-top: 65px
+        text-align: left 
+        >li 
+            align-items: center 
+            @extend .flex
+            flex-flow: row wrap
+            &:not(:last-child) 
+                padding-bottom: 35px 
+            >span 
+                &:first-child
+                    margin-right: 35px
+                flex: 1
+                h3 
+                    color: black
+                    padding-bottom: 10px
+                    &+p 
+                        font-size: 1.6rem
+                        line-height: 1.6em
+                        max-width: 233px
+                &:first-child
+                    flex: 0 0 auto 
+// @media only screen and (max-width: 1800px)    
+//     #home
+//         padding-left: 175px
+//         h1 
+//             font-size: 4.5rem
+//             &+p
+//                 font-size: 2.2rem
+// @media only screen and (max-width: 1600px)
+//     #home 
+//         padding-left: 35px      
+// @media only screen and (max-width: 1440px)
+//     .-pg-home
+//         background-position: calc(100% + 50px) 0
+//     #home 
+//         padding-right: 695px
+//         h1 
+//             font-size: 3rem
+//             &+p 
+//                 font-size: 1.7rem
+// @media only screen and (max-width: 1024px)
+//     .-pg-home
+//         background-image: url(assets/imgs/bgPeace768.png)
+//         background-position: 26vw -45px
+//         .tcon
+//             &-menu__lines
+//                 background: white
+//                 &::before,&::after
+//                     background: white            
+//         // background-color: $bluejeans
+//         // background-image: none        
+//         #home
+//             padding-right: 0     
+//             padding-top: 135px
+//             h1+p 
+//                 max-width: 370px
+// @media only screen and (max-width: 767px)
+//     .-pg-home
+//         background-position: 185px 0vw
+//         background-size: 590px
+//         main
+//             display: flex
+//             flex-flow: column
+//             align-content: center
+//             justify-content: center        
+//         #home  
+//             padding-top: 70px
+//             padding-left: 0
+//             text-align: center
+//             h1+p 
+//                 max-width: 320px
+//                 margin-left: auto 
+//                 margin-right: auto           
+//             .bitcoin-for-beginners
+//                 margin: 0 auto
+//                 max-width: 320px
+//                 padding-left: 15px
+//                 padding-right: 15px
+//         .footer 
+//             height: auto        
+//             .social 
+//                 > li:not(:last-child)
+//                     margin-right: 2px            
+// @media only screen and (max-width: 580px)
+//     .-pg-home
+//  @media only screen and (max-width: 1800px)    
+//     #home
+//         padding-left: 175px
+//         h1 
+//             font-size: 4.5rem
+//             &+p
+//                 font-size: 2.2rem
+// @media only screen and (max-width: 1600px)
+//     #home 
+//         padding-left: 35px      
+// @media only screen and (max-width: 1440px)
+//     .-pg-home
+//         background-position: calc(100% + 50px) 0
+//     #home 
+//         padding-right: 695px
+//         h1 
+//             font-size: 3rem
+//             &+p 
+//                 font-size: 1.7rem
+// @media only screen and (max-width: 1024px)
+//     .-pg-home
+//         background-image: url(assets/imgs/bgPeace768.png)
+//         background-position: 26vw -45px
+//         .tcon
+//             &-menu__lines
+//                 background: white
+//                 &::before,&::after
+//                     background: white            
+//         // background-color: $bluejeans
+//         // background-image: none        
+//         #home
+//             padding-right: 0     
+//             padding-top: 135px
+//             h1+p 
+//                 max-width: 370px
+// @media only screen and (max-width: 767px)
+//     .-pg-home
+//         background-position: 185px 0vw
+//         background-size: 590px
+//         main
+//             display: flex
+//             flex-flow: column
+//             align-content: center
+//             justify-content: center        
+//         #home  
+//             padding-top: 70px
+//             padding-left: 0
+//             text-align: center
+//             h1+p 
+//                 max-width: 320px
+//                 margin-left: auto 
+//                 margin-right: auto           
+//             .bitcoin-for-beginners
+//                 margin: 0 auto
+//                 max-width: 320px
+//                 padding-left: 15px
+//                 padding-right: 15px
+//         .footer 
+//             height: auto        
+//             .social 
+//                 > li:not(:last-child)
+//                     margin-right: 2px            
+// @media only screen and (max-width: 580px)
+//     .-pg-home
+ 
+@media only screen and (min-width: 1681px)
+        .-pg-home
+            background-image: url(assets/imgs/BG1920.png)
+@media only screen and (max-width: 1680px)
+        .-pg-home
+            background-image: url(assets/imgs/BG1366.png)
+            background-size: 1024px
+        #home 
+            padding-left: 35px
+@media only screen and (max-width: 1330px)
+        #home 
+            padding-right: 768px
+            h1
+                font-size: 3rem
+                &+p
+                    font-size: 2rem
+                    max-width: 290px  
+@media only screen and (max-width: 1024px) and (orientation: landscape)        
+        .-pg-home
+            background-size: 840px
+@media only screen and (max-width: 1024px) and (orientation: portrait)        
+        .-pg-home
+            background-size: 520px 
+@media only screen and (max-width: 1024px)
+        #home 
+            padding-right: 15px
+            padding-left: 15px
+        .-pg-home
+            .footer
+                .container
+                    padding-left: 15px
+                    padding-right: 15px
+@media only screen and (max-width: 767px)
+        .-pg-home
+            .header
+                .container
+                    padding-top: 45px
+            .footer
+                height: auto         
+@media only screen and (max-width: 767px) and (orientation: landscape) 
+        .-pg-home
+            background-image: url(assets/imgs/BG320.png)
+            background-size: 1024px
+        #home 
+            padding-top: 25px
+@media only screen and (max-width: 767px) and (orientation: portrait) 
+        .-pg-home
+            background-image: url(assets/imgs/BG320.png)
+            background-size: 568px 
+        #home 
+            padding-top: 110px
+            text-align: center
+            h1
+                &+p
+                    max-width: 100%     
+            .bitcoin-for-beginners
+                >li
+                    >span:first-child
+                        margin-right: 0
+                        margin-bottom: 25px
+                    flex-flow: column wrap
+                    text-align: center
+@media only screen and (max-width: 568px) and (orientation: landscape) 
+        .-pg-home
+            background-image: url(assets/imgs/BG320.png)
+            background-size: 800px

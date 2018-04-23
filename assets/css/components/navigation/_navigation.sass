@@ -1,0 +1,35 @@
+.navigation
+    >ul 
+        >li 
+            > a
+                font-weight: bold
+                +rem(1.2)
+            text-transform: uppercase
+    &.-mobile
+        background: transparentize($bluejeans, .05)
+        left: 0
+        position: fixed
+        overflow: hidden 
+        top: 0
+        height: 0
+        width: 100%
+        z-index: 10
+        .social
+            >li 
+                background-color: $transparent
+                border: 1px $cyan solid
+                color: white 
+        &.-on
+            height: 100vh
+        >ul 
+            align-items: center
+            @extend .flex
+            flex-flow: column
+            height: 100%
+            justify-content: center 
+            >li 
+                color: white
+                display: block 
+                padding: 15px 25px
+                >a 
+                    +rem(1.6)
